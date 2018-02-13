@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-xs-12">
+    <img [src]="home.image" alt="{{home.type}}" class="img-responsive" style="max-height: 300px;">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <h1><span class="label label-primary" style="background-color: greenyellow;">Home Id: {{home.id}}</span></h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <div class="btn-group" appDropdown>
+      <button type="button" class="btn btn-primary dropdown-toggle">Manage <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a style="cursor: pointer;" (click)="onEditHome()">Edit Home</a></li>
+        <li><a style="cursor: pointer;"  (click)="onDeleteHome()">Delete</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <h4><span class="label label-primary" style="background-color: grey;">Type: {{home.type}}</span></h4>
+    <h4><span class="label label-primary" style="background-color: grey;">Price: {{home.price | currency: 'USD'}}</span></h4>
+    <h4><span class="label label-primary" style="background-color: grey;">Number Of Bedrooms: {{home.bedrooms}}</span></h4>
+    <h4><span class="label label-primary" style="background-color: grey;">Number Of Bathrooms: {{home.bathrooms}}</span></h4>
+    <h4><span class="label label-primary" style="background-color: grey;">Area in Square Ft: {{home.area}}</span></h4>
+    <h4><span class="label label-primary" style="background-color: grey;">Public Review: {{home.description}}</span></h4>
+    <h4><span class="label label-primary" style="background-color: grey;">Address: {{home.address}}</span></h4>
+  </div>
+</div>
